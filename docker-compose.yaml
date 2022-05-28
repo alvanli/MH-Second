@@ -1,0 +1,20 @@
+version: "3.8"
+services:
+  mhsecond:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: "ch35li/mhsecond:debug"
+    user: ${FIXUID:?}:${FIXGID:?}
+    ports:
+      - "8889:8889"
+      - "8888:8888"
+    environment:
+      - NUMBAPRO_CUDA_DRIVER=/usr/lib/x86_64-linux-gnu/libcuda.so
+      - NUMBAPRO_NVVM=/usr/local/cuda/nvvm/lib64/libnvvm.so
+      - NUMBAPRO_LIBDEVICE=/usr/local/cuda/nvvm/libdevicel
+    tty: true 
+    volumes:
+      - /mnt/wato-drive/nuScenes:/home/nuScenes:z
+      - /mnt/wato-drive/perception_pcds/:/home/road:z
+      - /home/ch35li/alvin/perp_stuff/PointPillars/MultiheadSECOND:/home/
