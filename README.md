@@ -5,4 +5,5 @@ This is just a repo to test some object detection algos with minor modifications
 
 JustSECOND is under `OpenPCDet/tools/JustSECOND`
 - `./spinup.sh` to start docker container
-- - data augmentation is sometimes done in `OpenPCDet/pcdet/datasets/nuscenes/nuscenes_dataset.py`
+- data augmentation is sometimes done in `OpenPCDet/pcdet/datasets/nuscenes/nuscenes_dataset.py`
+- config is in `OpenPCDet/tools/cfgs/da-nuscenes-wato_models/mhsecond.yaml`
